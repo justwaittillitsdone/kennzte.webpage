@@ -18,6 +18,24 @@
     box-sizing: border-box;
 }
 
+/* Speziell für Smartphones */
+@media (max-width: 480px) {
+    .landing-card {
+        width: 95%;      /* Nutze fast die ganze Breite */
+        padding: 1.5rem; /* Weniger Innenabstand als auf dem Desktop */
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Schrift etwas kleiner, damit sie nicht umbricht */
+    }
+
+    button, input {
+        font-size: 16px; /* WICHTIG: Mindestens 16px, sonst zoomt iOS/Android beim Tippen automatisch rein */
+        padding: 16px;   /* Größere Touch-Fläche */
+    }
+}
+
 body {
     background-color: var(--bg-dark);
     font-family: var(--text-roboto);
