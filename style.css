@@ -1,0 +1,190 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:wght@700&family=Roboto:wght@400&display=swap');
+
+:root {
+    --bg-dark: #0f172a;        /* Tiefes Blau-Schwarz */
+    --accent-pink: #ff2e63;    /* Knalliges Pink für Charakter */
+    --accent-blue: #08d9d6;    /* Frisches Türkis/Blau */
+    --card-bg: #1e293b;        /* Slate-Grey Card */
+    --text-main: #f8fafc;
+    --text-roboto: 'Roboto', sans-serif;
+    --font-handwriting: 'Gloria Hallelujah', cursive;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: var(--text-roboto);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Hintergrund-Effekt für mehr "Charakter" */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--accent-pink);
+    filter: blur(150px);
+    opacity: 0.2;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+}
+
+.landing-card {
+    background: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Typografie */
+.badge {
+    font-family: var(--font-handwriting);
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    transform: rotate(-3deg); /* Verspielter Look */
+}
+
+h1 {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+p {
+    font-family: var(--text-roboto);
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.app-icon {
+    width: 100px;            /* Perfekte Größe für ein Card-Icon */
+    height: 100px;
+    display: block;         /* Zentrierung vorbereiten */
+    margin: 15px auto 15px; /* 15px oben, auto (zentriert), 15px unten */
+    border-radius: 18px;    /* Passend zum Apple/Android App-Icon Radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Subtiler Schatten für Tiefe */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+}
+
+/* Container für das Formular */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Sauberer Abstand zwischen den Feldern */
+    text-align: left; /* Labels linksbündig für bessere Lesbarkeit */
+}
+
+/* Label-Styling (Die Texte über den Eingabefeldern) */
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #94a3b8; /* Dezentes Grau wie im Footer */
+}
+
+/* Gemeinsames Styling für Input und Textarea */
+input[type="email"],
+textarea {
+    background: #0f172a; /* Sehr dunkles Blau-Schwarz */
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 14px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Fokus-Effekt (Wenn man reinklickt) */
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #08d9d6; /* Dein Türkis-Blau Akzent */
+    box-shadow: 0 0 10px rgba(8, 217, 214, 0.2);
+}
+
+/* Spezifisches Styling für das Nachrichtenfeld */
+textarea {
+    min-height: 120px;
+    resize: vertical; /* User kann Höhe anpassen, aber nicht Breite */
+}
+
+/* Button Styling (Behält deinen Charakter-Look) */
+button[type="submit"] {
+    margin-top: 10px;
+    background: #ff2e63; /* Dein Pink-Akzent */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 46, 99, 0.3);
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4d7d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 46, 99, 0.5);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+footer {
+    position: fixed; /* Fixiert den Footer am unteren Bildschirmrand */
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+.footer-text {
+    font-family: var(--text-roboto);
+    font-size: 0.85rem;
+    color: rgba(148, 163, 184, 0.5); /* Sehr dezentes, transparentes Grau (Slate-400 mit 50% Deckkraft) */
+    letter-spacing: 0.02em;
+    margin: 0; /* Überschreibt das Margin des allgemeinen p-Tags */
+}
+
+/* Falls der Bildschirm sehr klein ist, schieben wir den Footer etwas weg vom Content */
+@media (max-height: 500px) {
+    footer {
+        position: relative;
+        margin-top: 40px;
+        bottom: 10px;
+    }
+}
+
+.hidden { display: none; }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Anmeldung | Dein Projektname</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="landing-card">
+    <img src="assets/app-icon-clean.png" alt="App Icon" class="app-icon">
+    <span class="badge">KENNZTE? KENNZTE?</span>
+    <h1>Werde Beta-Tester</h1>
+    <p>Keine Lust auf Standard? Wir bauen etwas Neues. Trag dich ein und sei dabei.</p>
+
+    <form
+            action="https://formspree.io/f/xdawjdea"
+            method="POST"
+    >
+        <label>
+            Deine Email Adresse für den Einladungs Link:
+            <input type="email" name="email">
+        </label>
+        <label>
+            Warum du dabei sein möchtest:
+            <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="message" class="success-area hidden">
+        Geil! Du bist auf der Liste. 🚀
+    </div>
+</main>
+<footer>
+    <p class="footer-text">Gebaut mit       ❤️     und    🧠   | Website gebaut von Daniel</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
