@@ -33,8 +33,14 @@
         <p><strong>Keine Analyse-Tools:</strong> Die App nutzt keine Tracking-Tools (wie Google Analytics oder Firebase) und keine Werbenetzwerke, die Nutzerdaten sammeln.</p>
 
         <h2>3. App-Berechtigungen</h2>
-        <p>Damit die App funktioniert, fordert sie ggf. folgende Berechtigungen an:</p>
-        <p><strong>Kamera:</strong> Wird nur lokal zum Scannen/Fotografieren von Kennzeichen genutzt. Die Bilder verbleiben auf dem Gerät.</p>
+        <p>Damit die App ordnungsgemäß funktioniert, fordert sie folgende Berechtigungen an:</p>
+
+        <p><strong>Kamera (Rückkamera) – Kennzeichenerkennung:</strong><br>
+        Die App greift auf die Rückkamera des Endgeräts zu, um Kraftfahrzeugkennzeichen optisch zu erfassen und mittels Texterkennung (OCR) automatisiert auszuwerten. Die Bildverarbeitung und Zeichenerkennung erfolgt ausschließlich gerätelokal unter Verwendung von <em>Google ML Kit (Text Recognition API)</em> – einer in die App integrierten Softwarebibliothek, die vollständig auf dem Endgerät ohne Netzwerkverbindung ausgeführt wird.</p>
+        <p>Die von der Kamera erzeugten Bildaufnahmen werden ausschließlich flüchtig im Arbeitsspeicher des Geräts für die Dauer der Verarbeitung vorgehalten und unmittelbar nach Abschluss des Erkennungsvorgangs automatisch und unwiederbringlich gelöscht. Eine dauerhafte Speicherung von Kameraaufnahmen auf dem Gerät findet nicht statt.</p>
+        <p>Es erfolgt zu keinem Zeitpunkt eine Übermittlung von Kameraaufnahmen, daraus abgeleiteten Bilddaten oder Erkennungsergebnissen an den Anbieter, Google oder sonstige Dritte. Sämtliche Verarbeitungsvorgänge finden ausschließlich offline auf dem Endgerät statt.</p>
+        <p>Rechtsgrundlage für den Kamerazugriff ist die ausdrückliche Einwilligung der betroffenen Person gemäß Art. 6 Abs. 1 lit. a DSGVO, die durch aktive Erteilung der entsprechenden Geräteberechtigung auf Betriebssystemebene erklärt wird. Die Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden, indem die Kameraberechtigung für diese App in den Systemeinstellungen des Endgeräts entzogen wird. Durch den Widerruf wird die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung nicht berührt.</p>
+
         <p><strong>Galerie / Fotos:</strong> Ermöglicht es dir, ein bereits vorhandenes Bild von deinem Gerät auszuwählen, um es als Profilbild zu verwenden.</p>
 
         <h2>4. Weitergabe an Dritte</h2>
